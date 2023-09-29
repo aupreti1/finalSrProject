@@ -1,12 +1,11 @@
-import { NavigationContainer } from '@react-navigation/native';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+//Import project navigation component from naviagtion
+import ProjectNavigation from "./components/Navigation.js";
 
-
+//Export app
 export default function App() {
+  //Return
   return (
-    <NavigationContainer>
-      
-    </NavigationContainer>
+    //ProjectNavigation Component
+    <ProjectNavigation/>
   );
 }

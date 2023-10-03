@@ -13,7 +13,7 @@ import Register from "./pages/Register";
 import Forgot from "./pages/Forgot";
 import Invite from "./pages/Invite";
 import ListPage from "./pages/ListPage";
-import FailedSignIn from "./pages/FailedSignIn";
+// import FailedSignIn from "./pages/FailedSignIn";
 
 //Creating the Stack 
 const Stack = createStackNavigator();

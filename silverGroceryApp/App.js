@@ -1,11 +1,14 @@
-//Import project navigation component from naviagtion
+import {useState} from "react";
 import ProjectNavigation from "./components/Navigation.js";
+import {AuthContext} from "./components/Authentication.js";
 
-//Export app
+
 export default function App() {
-  //Return
+  const [hasUser, setUser] = useState(false);
+
   return (
-    //ProjectNavigation Component
-    <ProjectNavigation/>
+    <AuthContext.Provider value={{hasUser, setUser}}>
+      <ProjectNavigation/>
+    </AuthContext.Provider>
   );
 }

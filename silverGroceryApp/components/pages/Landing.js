@@ -3,7 +3,7 @@ import React from "react";
 //IMPORT components we will use
 import { View, Text, Button, Image, StyleSheet } from "react-native";
 //Import Use Naviagation Hook
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 
 //CREATE Landing function
 function Landing() {
@@ -19,11 +19,11 @@ function Landing() {
             {/* CREATE a container a container for Buttons */}
             <View style={styles.buttonContainer}>
                 {/* CREATE button for Log In */}
-                <Button color='#0f3d3d' title="LOG IN" onPress={() => pageNavigation.navigate("SignInPage")} />
+                <Button color='#0f3d3d' title="LOG IN" onPress={() => pageNavigation.navigate("SignInPage")}/>
                 {/* ADDING a space between the buttons */}
                 <View style={styles.spaceStyle}></View>
                 {/* CREATE button for Registration */}
-                <Button color='#0f3d3d' title="REGISTER" onPress={() => pageNavigation.navigate("RegisterPage")} />
+                <Button color='#0f3d3d' title="REGISTER" onPress={() => pageNavigation.navigate("RegisterPage")}/>
                 {/* END Button Container */}
             </View>
             {/* END Content Container */}

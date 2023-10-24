@@ -29,7 +29,7 @@ function Invite() {
        {/* Container for the Buttons */}
       <View style={styles.skipInviteButtons}>
          {/* BUTTON to NOT Invite another user and go to list page */}
-        <Button title="SKIP" color='#0f3d3d' onPress={() => pageNavigation.navigate("ListPage")}/>
+        <Button title="SIGN IN" color='#0f3d3d' onPress={() => pageNavigation.navigate("SignInPage")}/>
          {/* BUTTON to Invite another user */}
         <Button title="INVITE" color='#0f3d3d' />
        {/* END buttons container */}

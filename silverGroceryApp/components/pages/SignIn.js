@@ -4,6 +4,10 @@ import React from "react";
 import { View, Text, Button, TextInput, StyleSheet, Image, KeyboardAvoidingView, Platform } from "react-native";
 //Import Use Naviagation Hook
 import { useNavigation } from '@react-navigation/native';
+import {AuthContext} from "../Authentication";
+
+
+
 
 //CREATE SignIn function
 function SignIn() {
@@ -16,6 +20,8 @@ function SignIn() {
 
   //CREATE the page navigation hook to track navigation state
   const pageNavigation = useNavigation();
+  
+  const {setUser} = React.useContext(AuthContext);
 
   //RETURN the content
   return (
@@ -46,7 +52,7 @@ function SignIn() {
         {/* VIEW element to add space between buttons */}
         <View style={styles.spaceStyle}></View>
         {/* BUTTON to sign in and go to the list page */}
-        <Button title="SIGN IN" color='#0f3d3d' onPress={() => pageNavigation.navigate("ListPage")} />
+        <Button title="SIGN IN" color='#0f3d3d' onPress={() => setUser(true)}/>
         {/* END button container */}
       </View>
       {/* END the content container */}

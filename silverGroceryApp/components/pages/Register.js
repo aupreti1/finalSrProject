@@ -24,7 +24,7 @@ function Register() {
   return (
     //CREATE a container to hold content
     <KeyboardAvoidingView keyboardVerticalOffset={320} behavior={Platform.OS === "ios" ? "padding" : "height"} style={styles.container}>
-      <Image style={styles.logoStyle} source={{ uri: "https://cdn.pixabay.com/photo/2016/04/01/09/10/boat-1299188_640.png" }} />
+      <Image style={styles.logoStyle} source={require('../../assets/projectImages/pirateship.png')} />
       <View style={styles.switchContainer}>
         <Switch
           trackColor={{ false: '#767577', true: '#00857a' }}

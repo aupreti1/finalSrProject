@@ -13,7 +13,7 @@ function Landing() {
         //CREATE a container to hold content
         <View style={styles.container}>
             {/* CREATE the image logo */}
-            <Image style={styles.logoStyle} source={{ uri: "https://cdn.pixabay.com/photo/2016/03/31/23/37/bird-1297727_1280.png" }} />
+            <Image style={styles.logoStyle} source={require('../../assets/projectImages/pirateparrot.png')} />
             {/* TEXT element for heading */}
             <Text style={styles.textStyle}>Silver's Grocery List</Text>
             {/* CREATE a container a container for Buttons */}

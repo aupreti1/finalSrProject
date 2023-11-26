@@ -20,7 +20,7 @@ function Forgot() {
     //WHEN Keybaord is open - IF the platform is ios add padding behavior, if not add height behavior
     <KeyboardAvoidingView keyboardVerticalOffset={190} behavior={Platform.OS === "ios" ? "padding" : "height"} style={styles.container}>
         {/* IMAGE for the logo */}
-        <Image style={styles.logoStyle} source={{ uri: "https://cdn.pixabay.com/photo/2013/07/12/18/31/treasure-map-153425_640.png" }} />
+        <Image style={styles.logoStyle} source={require('../../assets/projectImages/treasuremap.png')} />
       {/* Container for the form */}
       <View style={styles.formStyles}>
         {/* TEXT for group name */}

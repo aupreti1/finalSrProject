@@ -28,7 +28,7 @@ function SignIn() {
     //WHEN Keybaord is open - IF the platform is ios add padding behavior, if not add height behavior
     <KeyboardAvoidingView keyboardVerticalOffset={250} behavior={Platform.OS === "ios" ? "padding" : "height"} style={styles.container}>
       {/* Image Logo for page */}
-      <Image style={styles.logoStyle} source={{ uri: "https://cdn.pixabay.com/photo/2013/07/13/13/40/penguin-161356_1280.png" }} />
+      <Image style={styles.logoStyle} source={require('../../assets/projectImages/piratepenguin.png')} />
       {/* Container for form */}
       <View style={styles.formStyles}>
         {/* TEXT for the Group Name */}

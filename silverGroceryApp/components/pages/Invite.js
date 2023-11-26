@@ -17,7 +17,7 @@ function Invite() {
     //WHEN Keybaord is open - IF the platform is ios add padding behavior, if not add height behavior
     <KeyboardAvoidingView keyboardVerticalOffset={130} behavior={Platform.OS === "ios" ? "padding" : "height"} style={styles.container}>
         {/* IMAGE logo element */}
-        <Image style={styles.logoStyle} source={{ uri: "https://cdn.pixabay.com/photo/2022/01/01/09/14/bird-6907231_640.png" }} />
+        <Image style={styles.logoStyle} source={require('../../assets/projectImages/treasurechestparrot.png')} />
       {/* Container for the form */}
       <View style={styles.formStyles}>
          {/* TEXT so the user knows what to put in the input */}

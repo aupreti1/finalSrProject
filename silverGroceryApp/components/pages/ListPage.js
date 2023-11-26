@@ -24,6 +24,12 @@ function ListPage() {
   //END addListItem Function
   };
 
+  const removeListItems = (i) => {
+    const removeItem = [...listItem];
+    removeItem.splice(i,1);
+    setListItem(removeItem);
+  };
+
 
   //RETURN the content
   return (
@@ -31,11 +37,13 @@ function ListPage() {
     <KeyboardAvoidingView keyboardVerticalOffset={130} behavior={Platform.OS === "ios" ? "padding" : "height"} style={styles.container}>
       {/* TEXT so the user knows what to put in the input */}
       <Text style={styles.formTextStyles}>Add an Item to the List: </Text>
+      {/* CONTAINER for the form */}
       <View style={styles.formStyles}>
-        {/* INPUT for the email invite */}
+        {/* INPUT for the user input */}
         <TextInput style={styles.input} value={userInput} onChangeText={(userInput) => setUserInput(userInput)} />
+        {/* CONTAINER for the add button  */}
         <View style={styles.addItemButton}>
-          {/* BUTTON to Invite another user */}
+          {/* BUTTON to add an item */}
           <Button title="+" color='#0f3d3d' onPress={addListItems} />
           {/* END buttons container */}
         </View>
@@ -44,11 +52,14 @@ function ListPage() {
       {/* CONTAINER for the new list item to show */}
       <View>
         {/* LOOP through the listItem array looking at each item */}
-        {listItem.map((item) => {
+        {listItem.map((item, i) => {
           // RETURN statement for the item in listItem
           return (
             // TEXT component to display item
-            <Text style={styles.listItemDisplay}>{item}</Text>
+            <View key={"li-" + i} style={styles.itemsDisplay}>
+              <Text style={styles.listItemDisplay}>{item}</Text>
+              <Button title="x" color='#0f3d3d' onPress={() => removeListItems(i)}/>
+            </View>
           //END Return
           );
         //END loop
@@ -101,7 +112,11 @@ const styles = StyleSheet.create({
   },
   listItemDisplay: {
     padding: 10,
+    marginRight: 10,
   },
+  itemsDisplay: {
+    flexDirection: "row",
+  }
   //END Styles
 });
 

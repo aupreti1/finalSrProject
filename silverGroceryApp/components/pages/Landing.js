@@ -3,11 +3,13 @@ import React from "react";
 //IMPORT components we will use
 import { View, Text, Button, Image, StyleSheet } from "react-native";
 //Import Use Naviagation Hook
-import {useNavigation} from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 //CREATE Landing function
 function Landing() {
+    //CREATE the page navigation hook to track navigation state
     const pageNavigation = useNavigation();
+
     //RETURN the content
     return (
         //CREATE a container to hold content
@@ -16,14 +18,14 @@ function Landing() {
             <Image style={styles.logoStyle} source={require('../../assets/projectImages/pirateparrot.png')} />
             {/* TEXT element for heading */}
             <Text style={styles.textStyle}>Silver's Grocery List</Text>
-            {/* CREATE a container a container for Buttons */}
+            {/* CREATE a container for Buttons */}
             <View style={styles.buttonContainer}>
-                {/* CREATE button for Log In */}
-                <Button color='#0f3d3d' title="LOG IN" onPress={() => pageNavigation.navigate("SignInPage")}/>
+                {/* CREATE button for Log In - navigates to the sign in page*/}
+                <Button color='#0f3d3d' title="LOG IN" onPress={() => pageNavigation.navigate("SignInPage")} />
                 {/* ADDING a space between the buttons */}
                 <View style={styles.spaceStyle}></View>
-                {/* CREATE button for Registration */}
-                <Button color='#0f3d3d' title="REGISTER" onPress={() => pageNavigation.navigate("RegisterPage")}/>
+                {/* CREATE button for Registration - navigates to the registration page*/}
+                <Button color='#0f3d3d' title="REGISTER" onPress={() => pageNavigation.navigate("RegisterPage")} />
                 {/* END Button Container */}
             </View>
             {/* END Content Container */}

@@ -4,9 +4,8 @@ import React from "react";
 import { View, Text, Button, TextInput, StyleSheet, Image, KeyboardAvoidingView, Platform } from "react-native";
 //Import Use Naviagation Hook
 import { useNavigation } from '@react-navigation/native';
-import {AuthContext} from "../Authentication";
-
-
+//Import AuthContext hook from authentication file
+import { AuthContext } from "../Authentication";
 
 
 //CREATE SignIn function
@@ -20,8 +19,8 @@ function SignIn() {
 
   //CREATE the page navigation hook to track navigation state
   const pageNavigation = useNavigation();
-  
-  const {setUser} = React.useContext(AuthContext);
+  //SET user's authentication status
+  const { setUser } = React.useContext(AuthContext);
 
   //RETURN the content
   return (
@@ -52,7 +51,7 @@ function SignIn() {
         {/* VIEW element to add space between buttons */}
         <View style={styles.spaceStyle}></View>
         {/* BUTTON to sign in and go to the list page */}
-        <Button title="SIGN IN" color='#0f3d3d' onPress={() => setUser(true)}/>
+        <Button title="SIGN IN" color='#0f3d3d' onPress={() => setUser(true)} />
         {/* END button container */}
       </View>
       {/* END the content container */}
@@ -74,14 +73,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     //Centers children
     justifyContent: 'center',
-    //END Container Style
+    //Adding padding to the bottom
     paddingBottom: 35,
+    //END Container Style
   },
+  //START styles for the form text
   formTextStyles: {
     //Color for the text
     color: '#0f3d3d',
     //Text size
     fontSize: 18,
+    //END styles for the form text
   },
   //Input Styles
   input: {
@@ -95,6 +97,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     //Input padding
     padding: 10,
+    //END input styles
   },
   //Stlyes for the login and forgot password btn
   passLogButtons: {
@@ -102,6 +105,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     //Adding space to the top
     top: 30,
+    //END button styles
   },
   //Space Styles between the two buttons
   spaceStyle: {
@@ -109,6 +113,7 @@ const styles = StyleSheet.create({
     width: 20,
     //Height of space
     height: 20,
+    //END spaceing styles
   },
   //Styles for the logo image
   logoStyle: {
@@ -120,6 +125,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     //Adding space at the bottom
     bottom: 35,
+    //END logo styles
   },
   //END Styles
 });
